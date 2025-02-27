@@ -2,7 +2,7 @@
 title: Developer Guide
 type: docs
 weight: 20
-url: /save-dicom-file/
+url: /net/developer-guide/save-dicom-file/
 ---
 
 

@@ -2,7 +2,7 @@
 title: Developer Guide
 type: docs
 weight: 20
-url: /anonymization/
+url: /net/developer-guide/anonymization/
 ---
 
 

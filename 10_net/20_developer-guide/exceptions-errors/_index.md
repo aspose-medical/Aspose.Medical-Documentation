@@ -2,7 +2,7 @@
 title: Developer Guide
 type: docs
 weight: 20
-url: /exceptions-errors/
+url: /net/developer-guide/exceptions-errors/
 ---
 
 

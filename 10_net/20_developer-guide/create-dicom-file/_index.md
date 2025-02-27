@@ -2,7 +2,7 @@
 title: Developer Guide
 type: docs
 weight: 20
-url: /create-dicom-file/
+url: /net/developer-guide/create-dicom-file/
 ---
 
 
