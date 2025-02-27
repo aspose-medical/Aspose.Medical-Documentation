@@ -1,0 +1,14 @@
+*.suo
+*.user
+_ReSharper.*
+.vs
+.idea
+bin
+obj
+packages
+build-out
+build-shared-out
+/external
+
+# "local files" in order to store some files in reposiroty folder, e.g. solution files that includes some local projects for investigations, batch files, ect.
+*.lf.*
