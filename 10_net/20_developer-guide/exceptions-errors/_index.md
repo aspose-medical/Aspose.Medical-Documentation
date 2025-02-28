@@ -26,14 +26,14 @@ System.Exception
 ## Understanding the Exception Classes
 
 ### `MedicalApiException`
-```c#
+```csharp
 Aspose.Medical.Errors.MedicalApiException
 ```
 
 This is the base class for all exceptions related to DICOM file processing in `Aspose.Medical`.
 
 ### `BadDicomFileException`
-```c#
+```csharp
 Aspose.Medical.Dicom.Errors.BadDicomFileException
 ```
 
@@ -41,7 +41,7 @@ This specific exception is thrown when a DICOM file is corrupted or incorrectly 
 
 ### `DicomValidationException`
 
-```c#
+```csharp
 Aspose.Medical.Dicom.ValueValidation.DicomValidationException
 ```
 
@@ -51,7 +51,7 @@ This exception indicates that validation of DICOM file contents failed due to no
 
 The following example demonstrates how to correctly handle exceptions when working with `DICOM` files using `Aspose.Medical`:
 
-```c#
+```csharp
 try
 {
     ProcessDicomFile("invalid.dcm");

@@ -16,7 +16,7 @@ To transcode a `DICOM` file, please follow the steps below:
 2. To transcode the `DICOM` file to another format, use the `Aspose.Medical.Dicom.DicomFile.Transcode()` method.
 3. Save the transcoded file for further use.
 
-```c#
+```csharp
 // Load existing file
 Aspose.Medical.Dicom.DicomFile dcm = DicomFile.Open("input.dcm");
 

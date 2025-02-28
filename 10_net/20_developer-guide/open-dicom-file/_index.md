@@ -16,7 +16,7 @@ To open an existing `DICOM` file, you simply have to call `Aspose.Medical.Dicom.
 
 This `c#` code shows you how to open a `DICOM` file:
 
-```c#
+```csharp
 string dcmFilePath = "sample.dcm";
 // Open the DICOM file using the specified file path
 Aspose.Medical.Dicom.DicomFile dcm = DicomFile.Open(dcmFilePath);
@@ -28,7 +28,7 @@ To open an existing `DICOM` file using its `System.IO.Stream`, you simply have t
 
 This `c#` code shows you how to open a `DICOM` file using its stream:
 
-```c#
+```csharp
 // Open the file as a stream
 using System.IO.FileStream fileStream = new("sample.dcm", FileMode.Open, FileAccess.Read);
 // Open the DICOM file from the stream
@@ -43,7 +43,7 @@ Both overloads of `Aspose.Medical.Dicom.DicomFile.Open` method allows passing fa
 
 This `c#` code shows you how to open a `DICOM` file with fallback encoding:
 
-```c#
+```csharp
 string dicomFilePath = "sample.dcm";
 
 // Specify fallback encoding (e.g., UTF-8, shift_jis)

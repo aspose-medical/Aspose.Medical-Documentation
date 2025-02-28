@@ -22,7 +22,7 @@ To anonymize a `DICOM` file, please follow the steps below:
 3. Use `anonymizer.Anonymize(dicomFile)` to remove sensitive attributes.
 4. Save the anonymized file for further use.
 
-```c#
+```csharp
 // Load a DICOM file
 Aspose.Medical.Dicom.DicomFile dicomFile = DicomFile.Open("input.dcm");
 
@@ -47,7 +47,7 @@ To anonymize a `DICOM` file using a predefined specific Confidential Profile, pl
 3. Use `anonymizer.Anonymize(dicomFile)` to remove sensitive attributes.
 4. Save the anonymized file for further use.
 
-```c#
+```csharp
 // Create a default confidentiality profile with basic anonymization rules
 Aspose.Medical.Dicom.Anonymization.ConfidentialityProfile profile = ConfidentialityProfile.CreateDefault(ConfidentialityProfileOptions.CleanGraph);
 
@@ -109,7 +109,7 @@ TagPattern;Action
 
 To load a profile from CSV file, please use the following code snippet:
 
-```c#
+```csharp
 // Load confidentiality profile from a CSV file
 Aspose.Medical.Dicom.Anonymization.ConfidentialityProfile profile = ConfidentialityProfile.LoadFromCsvFile("profile.csv", ConfidentialityProfileOptions.All);
 
@@ -133,7 +133,7 @@ A `JSON` file can define anonymization rules for specific `DICOM` tags.
 
 To load a profile from `JSON` file, please use the following code snippet:
 
-```c#
+```csharp
 // Load confidentiality profile from a JSON file
 Aspose.Medical.Dicom.Anonymization.ConfidentialityProfile profile = ConfidentialityProfile.LoadFromJsonFile("profile.json", ConfidentialityProfileOptions.All);
 
@@ -162,7 +162,7 @@ Aspose.Medical.Dicom.Anonymization.Anonymizer anonymizer = new(profile);
 
 To load a profile from `XML` file, please use the following code snippet:
 
-```c#
+```csharp
 // Load confidentiality profile from an XML file
 Aspose.Medical.Dicom.Anonymization.ConfidentialityProfile profile = ConfidentialityProfile.LoadFromXmlFile("profile.xml", ConfidentialityProfileOptions.All);
 
@@ -179,7 +179,7 @@ To anonymize a `DICOM` file using custom settings for `PatientName` and `Patient
 2. Applying this profile anonymizes files while keeping certain identifiers intact.
 3. Save the anonymized file for further use.
 
-```c#
+```csharp
 // Load a DICOM file
 Aspose.Medical.Dicom.DicomFile dicomFile = DicomFile.Open("input.dcm");
 
@@ -209,7 +209,7 @@ Instead of generating a new file, you may want to modify the `DICOM` file direct
 4. Save the anonymized file for further use.
 
 
-```c#
+```csharp
 // Load a DICOM file
 Aspose.Medical.Dicom.DicomFile dicomFile = DicomFile.Open("input.dcm");
 

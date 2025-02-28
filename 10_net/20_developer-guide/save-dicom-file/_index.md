@@ -18,7 +18,7 @@ To save a `DICOM` file to a specific location, use the `Aspose.Medical.Dicom.Dic
 
 The following example demonstrates how to save a `DICOM` file to a specified path using default options:
 
-```c#
+```csharp
 // Create an instance of DicomFile (assuming a DICOM file is already created or loaded)
 Aspose.Medical.Dicom.DicomFile dicomFile = new();
 
@@ -37,7 +37,7 @@ Save options in `Aspose.Medical.Dicom.Writers.SaveOptions` allow fine-grained co
 
 The following example demonstrates how to save a `DICOM` file to a specified path with custom options:
 
-```c#
+```csharp
 // Create an instance of DicomFile (assuming a DICOM file is already created or loaded)
 Aspose.Medical.Dicom.DicomFile dicomFile = new();
 
@@ -60,7 +60,7 @@ dicomFile.Save(outputFilePath, customOptions);
 
 It is possible to save a `DICOM` file to a stream by passing an output stream to the `Aspose.Medical.Dicom.DicomFile` class `Save` method. There are many types of streams to which a `DICOM` file can be saved. In the below example, we have created a new `DICOM` file and Save the `DICOM` file to the stream.
 
-```c#
+```csharp
 // Define custom save options
 Aspose.Medical.Dicom.Writers.SaveOptions customOptions = new()
 {

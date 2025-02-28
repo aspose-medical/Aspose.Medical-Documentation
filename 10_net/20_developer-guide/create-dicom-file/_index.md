@@ -14,7 +14,7 @@ url: /net/developer-guide/create-dicom-file/
 
 For scenarios where an empty `DICOM` file needs to be initialized before adding data, use the parameterless constructor.
 
-```c#
+```csharp
 // Create an empty DICOM file
 Aspose.Medical.Dicom.DicomFile dicomFile = new();
 
@@ -30,7 +30,7 @@ If you have an existing `DICOM` file, you can create a new `Aspose.Medical.Dicom
 
 If you have an existing `DICOM` file, you can create a new `Aspose.Medical.Dicom.DicomFile` instance by copying data from another `Aspose.Medical.Dicom.DicomFile` object.
 
-```c#
+```csharp
 // Load an existing DICOM file
 Aspose.Medical.Dicom.DicomFile existingFile = LoadExistingDicomFile();
 
@@ -45,7 +45,7 @@ dicomFile.Dataset.AddOrUpdate(Tag.XAAcquisitionFrameRate, 17.95);
 
 If you want to create a new `DICOM` file from scratch using a `Aspose.Medical.Dicom.Dataset`, you can use the `Aspose.Medical.Dicom.DicomFile(Aspose.Medical.Dicom.Dataset dataset)` constructor.
 
-```c#
+```csharp
 // Create a new dataset that will hold medical imaging data
 Aspose.Medical.Dicom.Dataset dataset = [];
 
@@ -60,7 +60,7 @@ dicomFile.Dataset.AddOrUpdate(Tag.XAAcquisitionFrameRate, 17.95);
 
 If you need to customize the metadata along with the dataset, use the constructor that accepts `Aspose.Medical.Dicom.MetaInformation` and `Aspose.Medical.Dicom.Dataset`.
 
-```c#
+```csharp
 // Create a new dataset for storing DICOM attributes
 Aspose.Medical.Dicom.Dataset dataset = [];
 
