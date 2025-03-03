@@ -14,3 +14,4 @@ The following subsections will guide you through accessing `DICOM` attributes, m
 
 - [Getting data]({{< ref "/10_net/20_developer-guide/data-manipulation/getting-data" >}} "Getting Data")
 - [Adding/Updating/Removing data]({{< ref "/10_net/20_developer-guide/data-manipulation/manage-data" >}} "Adding/Updating/Removing Data")
+- [Manage `DICOM` Data Elements]({{< ref "/10_net/20_developer-guide/data-manipulation/manage-data" >}} "Manage DICOM Data Elements")
