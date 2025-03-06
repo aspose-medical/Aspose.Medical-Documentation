@@ -1,12 +1,12 @@
 ---
 title: Developer Guide
 type: docs
-weight: 20
-url: /net/developer-guide/anonymization/
+weight: 70
+url: /net/developer-guide/dicom-anonymization/
 ---
 
 
-# Anonymization
+# DICOM Anonymization
 
 `DICOM` (Digital Imaging and Communications in Medicine) files contain sensitive patient information that must be protected when sharing medical imaging data. Anonymization ensures that personally identifiable information (PII) is removed or modified while maintaining the integrity of the medical images.
 

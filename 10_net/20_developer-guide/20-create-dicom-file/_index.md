@@ -5,8 +5,7 @@ weight: 20
 url: /net/developer-guide/create-dicom-file/
 ---
 
-
-# Create `DICOM` file.
+# Create `DICOM` file
 
 `Aspose.Medical` provides the `Aspose.Medical.Dicom.DicomFile` class, which allows users to create, modify, and work with `DICOM` files. To create `Aspose.Medical.Dicom.DicomFile` from scratch, you can simply initialize a new instance of the `Aspose.Medical.Dicom.DicomFile` class using any available constructor.
 
@@ -34,7 +33,7 @@ If you have an existing `DICOM` file, you can create a new `Aspose.Medical.Dicom
 // Load an existing DICOM file
 Aspose.Medical.Dicom.DicomFile existingFile = LoadExistingDicomFile();
 
-// Create an empty DICOM file
+// Create a copy of the DICOM file
 Aspose.Medical.Dicom.DicomFile dicomFile = new(existingFile);
 
 // Add data to the newly created DICOM file

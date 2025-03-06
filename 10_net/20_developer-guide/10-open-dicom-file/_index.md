@@ -1,14 +1,14 @@
 ---
 title: Developer Guide
 type: docs
-weight: 20
+weight: 10
 url: /net/developer-guide/open-dicom-file/
 ---
 
 
 # Open `DICOM` file
 
-In addition to generating `DICOM` files from scratch, the `Aspose.Medical` library offers a straightforward and effective method for opening and handling `DICOM` files within .NET applications. After you load a `DICOM` file, you can get information about the file, edit the `DICOM` data elements, add new tags, or remove existing ones, etc.
+The `Aspose.Medical` library offers a straightforward and effective method for opening and handling `DICOM` files within .NET applications. Opening existing DICOM files is the most common starting point for medical data workflows. After you load a `DICOM` file, you can get information about the file, edit the `DICOM` data elements, add new tags, or remove existing ones, etc.
 
 ## Opening a `DICOM` File Using a File Path
 

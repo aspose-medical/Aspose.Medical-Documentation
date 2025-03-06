@@ -1,8 +1,8 @@
 ---
 title: Developer Guide
 type: docs
-weight: 20
-url: /net/developer-guide/data-manipulation/manage-data-elements/
+weight: 30
+url: /net/developer-guide/data-manipulation/manage-dicom-data-elements/
 ---
 
 # Working with `DICOM` Data Elements Using `Aspose.Medical`

@@ -1,9 +1,11 @@
 ---
 title: Developer Guide
 type: docs
-weight: 20
-url: /net/developer-guide/imaging/
+weight: 50
+url: /net/developer-guide/dicom-imaging-operations/
 ---
+
+# DICOM Imaging Operations
 
 This documentation provides a step-by-step guide on how to render images (frames) stored in a `DICOM` file using the **`Aspose.Medical`** library. The **`Aspose.Medical.Dicom`** `API` allows us to load a `DICOM` file and render individual frames as raw images for further processing or display.
 
@@ -22,6 +24,7 @@ System.Console.WriteLine($"Total Frames in DICOM file: {frameCount}");
 This information helps decide which frame to render.
 
 ## Rendering a Single Frame as an Image
+
 The `Aspose.Medical.Dicom.DicomFile.RenderImage()` method allows rendering a single image (frame) from the `DICOM` file. By default, it renders the **first frame (index 0)**.
 
 ```csharp
@@ -33,6 +36,7 @@ Aspose.Medical.Imaging.IRawImage rawImage = dicomFile.RenderImage(0);
 The `Aspose.Medical.Imaging.IRawImage` contains image pixel data (in BGRA-32 format), dimensions, and color information.
 
 ### Accessing Image Properties
+
 After rendering, we can inspect the generated image details:
 
 ```csharp
@@ -44,13 +48,16 @@ System.Console.WriteLine($"Rendered Frame Dimensions: {width} x {height}");
 This gives us the size of the rendered image.
 
 ### Accessing Pixel Values
+
 ```csharp
 Aspose.Medical.Imaging.PixelFormats.Bgra32 pixelColor = rawImage[10, 10]; // Get pixel at (10,10)
 System.Console.WriteLine($"Pixel at (10,10): R={pixelColor.R}, G={pixelColor.G}, B={pixelColor.B}");
 ```
+
 This can be useful for **image analysis** or **displaying pixels** with custom processing.
 
 ## Rendering a Specific Frame
+
 If the `DICOM` file contains multiple frames, we can specify which frame to render by its **zero-based index**.
 
 ```csharp
@@ -64,7 +71,9 @@ Aspose.Medical.Imaging.IRawImage rawImage = dicomFile.RenderImage(frameIndex);
 This is useful for multi-frame modalities like **CT and MRI** scans.
 
 ## Rendering a Frame with Custom Options
+
 We can customize the rendering process using `Aspose.Medical.Dicom.Imaging.Options.RenderOptions`. These options control:
+
 - **Overlay visibility**
 - **Overlay color**
 
@@ -88,6 +97,7 @@ Aspose.Medical.Imaging.IRawImage rawImage = dicomFile.RenderImage(options, 0);
 Some `DICOM` files contain multiple image frames. You can iterate over all frames using `DicomFile.NumberOfFrames` and render each one sequentially.
 
 ### Steps:
+
 1. Open the DICOM file.
 2. Determine the total number of frames using `NumberOfFrames`.
 3. Loop through each frame and render it using `RenderImage(int frameIndex)`.

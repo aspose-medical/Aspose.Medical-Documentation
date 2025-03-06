@@ -1,12 +1,12 @@
 ---
 title: Developer Guide
 type: docs
-weight: 20
-url: /net/developer-guide/data-manipulation/getting-data/
+weight: 10
+url: /net/developer-guide/dicom-data-manipulation/getting-dicom-data/
 ---
 
 
-# Getting data
+# Getting DICOM data
 
 `Aspose.Medical` provides an easy-to-use API for reading and extracting information from `DICOM` files.
 
