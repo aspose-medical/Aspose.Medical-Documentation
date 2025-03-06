@@ -1,5 +1,5 @@
 ---
-title: Installation
+title: Licensing
 type: docs
 weight: 20
 url: /net/getting-started/licensing/
