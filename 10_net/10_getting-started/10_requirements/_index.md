@@ -27,6 +27,18 @@ To use Aspose.Medical for .NET effectively, ensure your development and runtime 
 
 4. Dependencies
 
-   - Aspose.Medical for .NET has no external dependencies apart from the .NET 8 runtime. Ensure your environment is set up with the required runtime libraries.
+   Aspose.Medical for .NET has the following external dependencies:
 
-If your application interacts with large DICOM files, ensure sufficient memory and storage resources to handle intensive operations.
+   - The .NET 8 runtime.
+   - Newtonsoft.Json (version 13.0.3).
+
+Ensure your environment is set up with the required runtime libraries.
+
+If your application interacts with large `DICOM` files, ensure sufficient memory and storage resources to handle intensive operations.
+
+## Development Environments
+
+Aspose.Medical for .NET can be used to develop applications in any development environment that targets the .NET platform, but these environments are explicitly supported:
+
+- Microsoft Visual Studio 2019
+- Microsoft Visual Studio 2022

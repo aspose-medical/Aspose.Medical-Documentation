@@ -2,13 +2,13 @@
 ---
 title: Installation
 type: docs
-weigth: 20
+weight: 20
 url: /net/getting-started/installation/
 ---
 
 # Installation
 
-The installation process for Aspose.Medical for .NET is straightforward and depend on the distribution format you choose. The library is available in both NuGet and ZIP formats. 
+The installation process for Aspose.Medical for .NET is straightforward and depend on the distribution format you choose. The library is available in both NuGet and ZIP formats.
 
 ## Installing via NuGet
 
