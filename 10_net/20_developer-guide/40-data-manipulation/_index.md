@@ -12,6 +12,6 @@ Data manipulation is a fundamental aspect of working with `DICOM` files, allowin
 
 The following subsections will guide you through accessing `DICOM` attributes, modifying tag values, and extending the dataset with additional information.
 
-- [Getting data]({{< ref "/10_net/20_developer-guide/data-manipulation/getting-data" >}} "Getting Data")
-- [Adding/Updating/Removing data]({{< ref "/10_net/20_developer-guide/data-manipulation/manage-data" >}} "Adding/Updating/Removing Data")
-- [Manage `DICOM` Data Elements]({{< ref "/10_net/20_developer-guide/data-manipulation/manage-data" >}} "Manage DICOM Data Elements")
+- [Getting DICOM data]({{< ref "/10_net/20_developer-guide/40-data-manipulation/10-getting-dicom-data" >}} "Getting Data")
+- [Adding/Updating/Removing data]({{< ref "/10_net/20_developer-guide/40-data-manipulation/20-manage-dicom-data" >}} "Adding/Updating/Removing Data")
+- [Manage `DICOM` Data Elements]({{< ref "/10_net/20_developer-guide/40-data-manipulation/30-manage-dicom-data-elements" >}} "Manage DICOM Data Elements")
