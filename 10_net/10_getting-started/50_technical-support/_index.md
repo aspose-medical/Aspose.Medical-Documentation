@@ -1,7 +1,7 @@
 ---
 title: Technical Support
 type: docs
-weight: 20
+weight: 50
 url: /net/getting-started/technical-support/
 ---
 

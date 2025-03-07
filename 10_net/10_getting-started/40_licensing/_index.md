@@ -1,7 +1,7 @@
 ---
 title: Licensing
 type: docs
-weight: 20
+weight: 40
 url: /net/getting-started/licensing/
 ---
 
