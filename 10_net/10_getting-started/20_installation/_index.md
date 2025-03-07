@@ -1,4 +1,3 @@
-#TODO: finish the article, add correct links and package names
 ---
 title: Installation
 type: docs
