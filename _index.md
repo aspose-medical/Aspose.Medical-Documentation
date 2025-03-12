@@ -11,7 +11,7 @@ url: /
 
 {{% alert color="primary" %}}
 
-![Aspose.Medical for .NET Product Logo](aspose_medical-for-net.svg)
+{{< figure src="aspose_medical-for-net.svg" alt="Aspose.Medical for .NET Product Logo" width="128" height="128" >}}
 
 The Aspose.Medical product family provides libraries for working with medical file formats, enabling developers to build applications tailored to the healthcare and medical imaging industries. Designed to simplify complex workflows, these libraries focus on handling key standards like DICOM while ensuring compatibility and ease of use across supported programming environments.
 
