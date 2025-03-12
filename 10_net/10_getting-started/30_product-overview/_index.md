@@ -48,8 +48,8 @@ Aspose.Medical is multithread safe as long as only one thread works on a DICOM f
 
 ## Pricing and Policies
 
-Please visit the [Licensing]({{< ref "/10_net/10_getting-started/licensing" >}} "Licensing") page for information on licenses and review the [Pricing Information](https://purchase.aspose.com/pricing/medical/family) page for details on pricing.
+Please visit the [Licensing]({{< ref "/10_net/10_getting-started/40_licensing" >}} "Licensing") page for information on licenses and review the [Pricing Information](https://purchase.aspose.com/pricing/medical/family) page for details on pricing.
 
 ## Technical Support
 
-For more information on Aspose.Medical technical support, take a look at the [Support page]({{< ref "/10_net/10_getting-started/technical-support" >}} "Licensing").
+For more information on Aspose.Medical technical support, take a look at the [Support page]({{< ref "/10_net/10_getting-started/50_technical-support" >}} "Licensing").
