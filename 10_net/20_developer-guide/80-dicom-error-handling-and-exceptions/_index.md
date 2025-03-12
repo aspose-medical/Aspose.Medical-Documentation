@@ -1,12 +1,12 @@
 ---
-title: Developer Guide
+title: DICOM Error Handling and Exceptions
 type: docs
 weight: 80
 url: /net/developer-guide/dicom-error-handling-and-exceptions/
 ---
 
 
-# DICOM Error Handling and Exceptions
+# `DICOM` Error Handling and Exceptions
 
 `Aspose.Medical` provides a set of custom exceptions to handle various errors related to `DICOM` file processing and validation.
 

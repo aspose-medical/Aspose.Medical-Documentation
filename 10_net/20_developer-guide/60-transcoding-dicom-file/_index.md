@@ -1,5 +1,5 @@
 ---
-title: Developer Guide
+title: Transcoding DICOM file
 type: docs
 weight: 60
 url: /net/developer-guide/transcoding-dicom-file/

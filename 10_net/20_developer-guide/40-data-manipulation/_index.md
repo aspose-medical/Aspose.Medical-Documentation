@@ -1,5 +1,5 @@
 ---
-title: Developer Guide
+title: Data manipulation
 type: docs
 weight: 40
 url: /net/developer-guide/dicom-data-manipulation/

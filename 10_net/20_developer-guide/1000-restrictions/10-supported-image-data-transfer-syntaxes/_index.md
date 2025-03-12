@@ -1,5 +1,5 @@
 ---
-title: Developer Guide
+title: Supported Image Data Transfer Syntaxes
 type: docs
 weight: 20
 url: /net/developer-guide/restrictions/supported-image-data-transfer-syntaxes/

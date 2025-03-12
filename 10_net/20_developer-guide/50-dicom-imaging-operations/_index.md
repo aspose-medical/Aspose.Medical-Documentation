@@ -1,11 +1,11 @@
 ---
-title: Developer Guide
+title: DICOM Imaging Operations
 type: docs
 weight: 50
 url: /net/developer-guide/dicom-imaging-operations/
 ---
 
-# DICOM Imaging Operations
+# `DICOM` Imaging Operations
 
 This documentation provides a step-by-step guide on how to render images (frames) stored in a `DICOM` file using the **`Aspose.Medical`** library. The **`Aspose.Medical.Dicom`** `API` allows us to load a `DICOM` file and render individual frames as raw images for further processing or display.
 

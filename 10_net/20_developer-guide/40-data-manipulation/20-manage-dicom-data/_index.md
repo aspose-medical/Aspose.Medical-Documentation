@@ -1,5 +1,5 @@
 ---
-title: Developer Guide
+title: Adding, Updating, and Removing Data from DICOM Files using Aspose.Medical
 type: docs
 weight: 20
 url: /net/developer-guide/data-manipulation/manage-dicom-data/

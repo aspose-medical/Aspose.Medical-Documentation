@@ -1,5 +1,5 @@
 ---
-title: Developer Guide
+title: Getting DICOM data
 type: docs
 weight: 10
 url: /net/developer-guide/dicom-data-manipulation/getting-dicom-data/
