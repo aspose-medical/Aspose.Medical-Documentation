@@ -38,7 +38,7 @@ Aspose.Medical for .NET covers most of the popular development environments and 
 
 ## Independence from Other Applications
 
-Aspose.Medical does not require third-party **applications**, for example, MicroDicom DICOM Viewer, to be installed on the machine in order to work. All Aspose components are completely independent. This makes Aspose.Medical a great alternative to automation in terms of security, stability, scalability/speed, price, and features for working with `DICOM` files. For additional, information see [Requirements]({{< ref "/10_net/10_getting-started/10_requirements" >}} "Requirements") page.
+Aspose.Medical does not require third-party **applications**, for example, MicroDicom DICOM Viewer, to be installed on the machine in order to work. All Aspose components are completely independent. This makes Aspose.Medical a great alternative to automation in terms of security, stability, scalability/speed, price, and features for working with `DICOM` files. For additional, information see [Requirements]({{< ref "/10-net/10-getting-started/10-requirements" >}} "Requirements") page.
 
 ## Performance and Scalability
 
@@ -48,8 +48,8 @@ Aspose.Medical is multithread safe as long as only one thread works on a DICOM f
 
 ## Pricing and Policies
 
-Please visit the [Licensing]({{< ref "/10_net/10_getting-started/40_licensing" >}} "Licensing") page for information on licenses and review the [Pricing Information](https://purchase.aspose.com/pricing/medical/family) page for details on pricing.
+Please visit the [Licensing]({{< ref "/10-net/10-getting-started/40-licensing" >}} "Licensing") page for information on licenses and review the [Pricing Information](https://purchase.aspose.com/pricing/medical/family) page for details on pricing.
 
 ## Technical Support
 
-For more information on Aspose.Medical technical support, take a look at the [Support page]({{< ref "/10_net/10_getting-started/50_technical-support" >}} "Licensing").
+For more information on Aspose.Medical technical support, take a look at the [Support page]({{< ref "/10-net/10-getting-started/50-technical-support" >}} "Licensing").
