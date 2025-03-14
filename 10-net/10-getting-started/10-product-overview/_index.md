@@ -1,7 +1,7 @@
 ---
 title: Product Overview
 type: docs
-weight: 30
+weight: 10
 url: /net/getting-started/product-overview/
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: Installation
 type: docs
-weight: 20
+weight: 30
 url: /net/getting-started/installation/
 ---
 

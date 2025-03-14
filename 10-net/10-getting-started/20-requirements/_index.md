@@ -1,7 +1,7 @@
 ---
 title: Requirements
 type: docs
-weigth: 10
+weigth: 20
 url: /net/getting-started/requirements/
 ---
 
