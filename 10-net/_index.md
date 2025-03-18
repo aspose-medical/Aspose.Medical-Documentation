@@ -12,7 +12,7 @@ url: /net/
 
 **Welcome to Aspose.Medical for .NET**
 
-![Aspose.Medical for .NET Product Logo](aspose_medical-for-net.svg)
+{{< figure src="aspose_medical-for-net.svg" alt="Aspose.Medical for .NET Product Logo" width="128" height="128" >}}
 
 Aspose.Medical for .NET is a specialized library designed to simplify handling medical file formats within .NET applications. The library focuses on the DICOM format, widely used in medical imaging systems to manage and exchange data. Aspose.Medical for .NET enables developers to seamlessly interact with local DICOM files, offering straightforward integration into applications requiring medical image processing or data analysis workflows.
 
