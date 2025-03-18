@@ -38,7 +38,7 @@ Aspose.Medical for .NET covers most of the popular development environments and 
 
 ## Independence from Other Applications
 
-Aspose.Medical does not require third-party **applications**, for example, MicroDicom DICOM Viewer, to be installed on the machine in order to work. All Aspose components are completely independent. This makes Aspose.Medical a great alternative to automation in terms of security, stability, scalability/speed, price, and features for working with `DICOM` files. For additional, information see [Requirements]({{< ref "/10-net/10-getting-started/10-requirements" >}} "Requirements") page.
+Aspose.Medical does not require third-party **applications**, for example, MicroDicom DICOM Viewer, to be installed on the machine in order to work. All Aspose components are completely independent. This makes Aspose.Medical a great alternative to automation in terms of security, stability, scalability/speed, price, and features for working with `DICOM` files. For additional, information see [Requirements]({{< ref "/10-net/10-getting-started/20-requirements" >}} "Requirements") page.
 
 ## Performance and Scalability
 
