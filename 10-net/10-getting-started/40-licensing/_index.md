@@ -46,7 +46,7 @@ This C# code shows you how to set a license file:
 
 ```csharp
 // Instantiates the License class
-Aspose.Medical.Licensing.License license = new ();
+Aspose.Medical.License license = new ();
 
 // Sets the license file path
 license.SetLicense("Aspose.Medical.lic");
@@ -62,7 +62,7 @@ You can load a license from a stream. This C# code shows you how to apply a lice
 
 ```csharp
 // Instantiates the License class
-Aspose.Medical.Licensing.License license = new ();
+Aspose.Medical.License license = new ();
 
 // Sets the license file path
 license.SetLicense(myStream);
@@ -85,7 +85,7 @@ This C# code shows you how to set a license as an embedded resource:
 
 ```csharp
 // Instantiates the License class
-Aspose.Medical.Licensing.License license = new ();
+Aspose.Medical.License license = new ();
 
 // Passes the license file name embedded in the assembly
 license.SetLicense("Aspose.Medical.lic");
