@@ -15,3 +15,4 @@ The following subsections will guide you through accessing `DICOM` attributes, m
 - [Getting DICOM data]({{< ref "/10-net/20-developer-guide/40-data-manipulation/10-getting-dicom-data" >}} "Getting Data")
 - [Adding/Updating/Removing data]({{< ref "/10-net/20-developer-guide/40-data-manipulation/20-manage-dicom-data" >}} "Adding/Updating/Removing Data")
 - [Manage `DICOM` Data Elements]({{< ref "/10-net/20-developer-guide/40-data-manipulation/30-manage-dicom-data-elements" >}} "Manage DICOM Data Elements")
+- [Adding private `Tags` to `Tag Dictionary`]({{< ref "/10-net/20-developer-guide/40-data-manipulation/40-adding-private-tags-to-tag-dictionary" >}} "Adding Private Tags To Tag Dictionary")
