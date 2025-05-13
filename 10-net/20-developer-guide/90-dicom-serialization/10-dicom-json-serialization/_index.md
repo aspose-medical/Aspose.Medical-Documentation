@@ -192,3 +192,12 @@ Aspose.Medical.Dicom.Dataset? loaded = Aspose.Medical.Dicom.Serialization.DicomJ
 System.Text.Json.JsonSerializerOptions options = new();
 options.Converters.Add(new DicomFileJsonConverter());
 ```
+
+## Async Api
+
+`Aspose.Medical.Dicom.Serialization.DicomJsonSerializer` provides the following `async` overloads:
+
+- `ValueTask<Aspose.Medical.Dicom.Dataset?> DeserializeAsync`. This method allows to deserialize UTF8 JSON stream into `Dataset`.
+- `ValueTask<Aspose.Medical.Dicom.DicomFile?> DeserializeFileAsync`. This method allows to deserialize UTF8 JSON stream into `DicomFile`.
+- `ValueTask<Aspose.Medical.Dicom.Dataset[]?> DeserializeListAsync`. This method allows to deserialize UTF8 JSON stream into a collection of `Dataset`.
+- `Task SerializeAsync` This method(s) allows to serialize `Dataset`, `DicomFile` and collection of `Dataset` into UTF8 JSON stream.
