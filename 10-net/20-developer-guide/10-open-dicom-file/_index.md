@@ -52,3 +52,7 @@ System.Text.Encoding fallbackEncoding = Encoding.GetEncoding("shift_jis");
 // Open the DICOM file with fallback encoding
 Aspose.Medical.Dicom.DicomFile dcm = DicomFile.Open(dicomFilePath, fallbackEncoding);
 ```
+
+
+# Advanced Options
+The Aspose.Medical.Dicom library offers several advanced strategies for reading data from DICOM files efficiently. This is especially useful when dealing with large datasets where memory optimization is critical. You can find additional information [here]({{< ref "/10-net/20-developer-guide/10-open-dicom-file/10-memory-management" >}} "Memory Management").
