@@ -16,3 +16,4 @@ The following subsections will guide you through accessing `DICOM` attributes, m
 - [Adding/Updating/Removing data]({{< ref "/10-net/20-developer-guide/40-data-manipulation/20-manage-dicom-data" >}} "Adding/Updating/Removing Data")
 - [Manage `DICOM` Data Elements]({{< ref "/10-net/20-developer-guide/40-data-manipulation/30-manage-dicom-data-elements" >}} "Manage DICOM Data Elements")
 - [Adding private `Tags` to `Tag Dictionary`]({{< ref "/10-net/20-developer-guide/40-data-manipulation/40-adding-private-tags-to-tag-dictionary" >}} "Adding Private Tags To Tag Dictionary")
+- [Custom Text Encoding]({{< ref "/10-net/20-developer-guide/40-data-manipulation/50-text-encoding" >}} "Text Encoding")
