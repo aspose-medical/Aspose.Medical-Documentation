@@ -17,10 +17,24 @@ To open an existing `DICOM` file, you simply have to call `Aspose.Medical.Dicom.
 This `c#` code shows you how to open a `DICOM` file:
 
 ```csharp
+
+// Optional: tune file I/O buffers and fallback text encoding
+Aspose.Medical.Dicom.Readers.ReadDicomFileOptions options = ReadDicomFileOptions.Default with
+{
+    FallbackEncoding = Encoding.GetEncoding("shift_jis"),
+    BufferTuningOptions = ReadBufferTuningOptions.Default
+};
+
 string dcmFilePath = "sample.dcm";
 // Open the DICOM file using the specified file path
-Aspose.Medical.Dicom.DicomFile dcm = DicomFile.Open(dcmFilePath);
+Aspose.Medical.Dicom.DicomFile dcm = DicomFile.Open(dcmFilePath, options);
 ```
+
+*Exceptions*:
+- `ArgumentException` (null/whitespace path),
+- `FileNotFoundException` (path not found),
+- `BadDicomFileException` (not a valid DICOM file).
+
 
 ## Opening a `DICOM` File from a Stream
 
@@ -29,11 +43,80 @@ To open an existing `DICOM` file using its `System.IO.Stream`, you simply have t
 This `c#` code shows you how to open a `DICOM` file using its stream:
 
 ```csharp
-// Open the file as a stream
-using System.IO.FileStream fileStream = new("sample.dcm", FileMode.Open, FileAccess.Read);
-// Open the DICOM file from the stream
-Aspose.Medical.Dicom.DicomFile dcm = DicomFile.Open(fileStream);
+// Optional: tune stream PipeReader buffers and fallback text encoding
+Aspose.Medical.Dicom.Readers.ReadDicomStreamOptions options = ReadDicomStreamOptions.Default with
+{
+    FallbackEncoding = System.Text.Encoding.UTF8,
+    BufferTuningOptions = Aspose.Medical.Dicom.Readers.ReadBufferTuningOptions.Default
+};
+
+Aspose.Medical.Dicom.Readers.ITagDataReadingStrategy strategy = Aspose.Medical.Dicom.Readers.TagDataReadingStrategies.ReadAll();
+
+await using System.IO.FileStream fs = new("sample.dcm", System.IO.FileMode.Open, System.IO.FileAccess.Read);
+
+Aspose.Medical.Dicom.DicomFile dcm = DicomFile.Open(fs, options, strategy);
 ```
+
+*Exception*: `BadDicomFileException` if the stream does not contain a valid DICOM file.
+
+## Opening a `DICOM` File from Pipe
+
+To open an existing `DICOM` file using `Pipe`, you simply have to call the `Aspose.Medical.Dicom.DicomFile.Open` method and pass the pipe (with the `DICOM` file you want to open) to it.
+
+This `c#` code shows you how to open a `DICOM` file using pipe:
+
+```csharp
+Aspose.Medical.Dicom.Readers.ReadDicomPipeOptions options = ReadDicomPipeOptions.Default with
+{
+    FallbackEncoding = System.Text.Encoding.UTF8,
+};
+
+Aspose.Medical.Dicom.Readers.ITagDataReadingStrategy strategy = TagDataReadingStrategies.ReadAll();
+
+System.IO.Pipelines.Pipe pipe; // pipe with DICOM file
+
+Aspose.Medical.Dicom.DicomFile dcm = DicomFile.Open(pipe, options, strategy);
+
+```
+
+*Exception*: `BadDicomFileException` if the stream does not contain a valid DICOM file.
+
+## Opening a `DICOM` File from Pipe Reader
+
+To open an existing `DICOM` file using `Pipe`, you simply have to call the `Aspose.Medical.Dicom.DicomFile.Open` method and pass the pipe (with the `DICOM` file you want to open) to it.
+
+This `c#` code shows you how to open a `DICOM` file using pipe:
+
+```csharp
+Aspose.Medical.Dicom.Readers.ReadDicomPipeOptions options = ReadDicomPipeOptions.Default with
+{
+    FallbackEncoding = System.Text.Encoding.GetEncoding("shift_jis"),
+};
+
+Aspose.Medical.Dicom.Readers.ITagDataReadingStrategy strategy = TagDataReadingStrategies.ReadAll();
+
+System.IO.Pipelines.PipeReader pipeReader; // pipe with DICOM file
+
+Aspose.Medical.Dicom.DicomFile dcm = DicomFile.Open(pipeReader, options, strategy);
+
+```
+
+*Exception*: `BadDicomFileException` if the stream does not contain a valid DICOM file.
+
+
+## Buffer tuning
+
+When opening from file/stream, you can tune the underlying buffers via `ReadBufferTuningOptions` on:
+
+- `ReadDicomFileOptions.BufferTuningOptions`
+- `ReadDicomStreamOptions.BufferTuningOptions`
+
+`ReadBufferTuningOptions` allows to specify:
+- `MinimumReadSize`. Low-watermark in bytes before refilling. Default value is -1. Clamped to [4 KiB, 4 MiB], aligned up to 4 KiB.
+- `BufferSize`. Minimum buffer size (bytes) when renting from the pool. Default value is -1. Clamped to [4 KiB, 4 MiB], aligned up to 4 KiB.
+
+For pipe inputs, the producer typically controls buffer sizes and flush cadence; `ReadDicomPipeOptions` exposes only FallbackEncoding.
+
 
 ## Handling Character Encoding in DICOM Files
 
@@ -46,13 +129,19 @@ This `c#` code shows you how to open a `DICOM` file with fallback encoding:
 ```csharp
 string dicomFilePath = "sample.dcm";
 
-// Specify fallback encoding (e.g., UTF-8, shift_jis)
 System.Text.Encoding fallbackEncoding = Encoding.GetEncoding("shift_jis");
 
-// Open the DICOM file with fallback encoding
-Aspose.Medical.Dicom.DicomFile dcm = DicomFile.Open(dicomFilePath, fallbackEncoding);
-```
+// Specify fallback encoding (e.g., UTF-8, shift_jis)
+Aspose.Medical.Dicom.Readers.ReadDicomFileOptions options = ReadDicomFileOptions.Default with
+{
+    FallbackEncoding = fallbackEncoding,
+    BufferTuningOptions = ReadBufferTuningOptions.Default
+};
 
+
+// Open the DICOM file with fallback encoding
+Aspose.Medical.Dicom.DicomFile dcm = DicomFile.Open(dicomFilePath, options);
+```
 
 # Advanced Options
 The Aspose.Medical.Dicom library offers several advanced strategies for reading data from DICOM files efficiently. This is especially useful when dealing with large datasets where memory optimization is critical. You can find additional information [here]({{< ref "/10-net/20-developer-guide/10-open-dicom-file/10-memory-management" >}} "Memory Management").

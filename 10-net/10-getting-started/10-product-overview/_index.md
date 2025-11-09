@@ -13,8 +13,6 @@ Aspose.Medical is a cross-platform class library that enables your applications 
 
 With Aspose.Medical, you can manage `DICOM` data elements, anonymize `DICOM` files, render `DICOM` images, transcode files between different transfer syntaxes, and more.
 
-It is worth noting that with Aspose.Medical you work with `DICOM` files without relying on third-party applications.
-
 ## Benefits of Using Aspose.Medical
 
 Using Aspose.Medical for .NET in your project gives you the following benefits:
@@ -53,3 +51,4 @@ Please visit the [Licensing]({{< ref "/10-net/10-getting-started/40-licensing" >
 ## Technical Support
 
 For more information on Aspose.Medical technical support, take a look at the [Support page]({{< ref "/10-net/10-getting-started/50-technical-support" >}} "Licensing").
+
