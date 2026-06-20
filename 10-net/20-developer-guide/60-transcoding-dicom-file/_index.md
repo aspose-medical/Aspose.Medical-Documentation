@@ -27,3 +27,23 @@ Aspose.Medical.Dicom.DicomFile transcodedDcm = dcm.Transcode(Aspose.Medical.Dico
 transcodedDcm.Save("output.dcm");
 ```
 
+## Transcoding to JPEG XL
+
+`Aspose.Medical` supports the JPEG XL transfer syntaxes. Encoding is available for:
+
+- `JpegXLLossless` - lossless JPEG XL (`1.2.840.10008.1.2.4.110`).
+- `JpegXL` - lossy or lossless JPEG XL (`1.2.840.10008.1.2.4.112`); lossy mode uses XYB at distance 1.0.
+
+`JpegXLJpegRecompression` (`1.2.840.10008.1.2.4.111`) can be decoded but not yet encoded, so it cannot be used as a transcoding target.
+
+```csharp
+// Load existing file
+Aspose.Medical.Dicom.DicomFile dcm = DicomFile.Open("input.dcm");
+
+// Transcode the loaded file to JPEG XL Lossless Transfer Syntax.
+Aspose.Medical.Dicom.DicomFile transcodedDcm = dcm.Transcode(Aspose.Medical.Dicom.TransferSyntax.JpegXLLossless);
+
+// Save the transcoded file
+transcodedDcm.Save("output.dcm");
+```
+

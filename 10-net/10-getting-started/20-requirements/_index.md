@@ -11,7 +11,7 @@ To use Aspose.Medical for .NET effectively, ensure your development and runtime 
 
 1. .NET Version
 
-   - The library is built for .NET 8, so you must have the .NET 8 SDK installed for development and the .NET 8 runtime for execution. These can be downloaded from the official .NET website.
+   - The library is built for .NET 10, so you must have the .NET 10 SDK installed for development and the .NET 10 runtime for execution. These can be downloaded from the official .NET website.
 
 2. Supported Operating Systems
 
@@ -29,7 +29,7 @@ To use Aspose.Medical for .NET effectively, ensure your development and runtime 
 
    Aspose.Medical for .NET has the following external dependencies:
 
-   - The .NET 8 runtime.
+   - The .NET 10 runtime.
    - Newtonsoft.Json (version 13.0.3).
 
 Ensure your environment is set up with the required runtime libraries.
@@ -40,5 +40,4 @@ If your application interacts with large `DICOM` files, ensure sufficient memory
 
 Aspose.Medical for .NET can be used to develop applications in any development environment that targets the .NET platform, but these environments are explicitly supported:
 
-- Microsoft Visual Studio 2019
-- Microsoft Visual Studio 2022
+- Microsoft Visual Studio 2022 (a version with .NET 10 support)
