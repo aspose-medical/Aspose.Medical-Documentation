@@ -35,9 +35,12 @@ The tag data reading strategy defines how `DICOM` tags are loaded into memory. T
 This strategy is suitable for small to moderate DICOM files.
 
 ```csharp
-Aspose.Medical.Dicom.DicomFile dicomFile = DicomFile.Open(
+Aspose.Medical.Dicom.DicomFile dicomFile = Aspose.Medical.Dicom.DicomFile.Open(
     "file.dcm",
-    fallbackEncoding: System.Text.Encoding.UTF8,
+    options: new Aspose.Medical.Dicom.Readers.ReadDicomFileOptions
+    {
+        FallbackEncoding = System.Text.Encoding.UTF8
+    },
     strategy: Aspose.Medical.Dicom.Readers.TagDataReadingStrategies.ReadAll()
 );
 ```
@@ -47,18 +50,24 @@ Aspose.Medical.Dicom.DicomFile dicomFile = DicomFile.Open(
 This strategy loads all small tags immediately but defers the loading of large data until explicitly accessed. Ideal for large `DICOM` files when you don't always need to use all tag data.
 
 ```csharp
-Aspose.Medical.Dicom.DicomFile dicomFile = DicomFile.Open(
+Aspose.Medical.Dicom.DicomFile dicomFile = Aspose.Medical.Dicom.DicomFile.Open(
     "large_file.dcm",
-    fallbackEncoding: System.Text.Encoding.UTF8,
+    options: new Aspose.Medical.Dicom.Readers.ReadDicomFileOptions
+    {
+        FallbackEncoding = System.Text.Encoding.UTF8
+    },
     strategy: Aspose.Medical.Dicom.Readers.TagDataReadingStrategies.ReadLargeOnDemand(largeObjectSizeKb: 128) // Tags > 128 KB will be deferred
 );
 ```
 
 Later, when you access a large tag, it will be loaded on demand.
 ```csharp
-// Example: Access large sequence
 Aspose.Medical.Dicom.Dataset dataset = dicomFile.Dataset;
-Span<byte> pixelDataTag = dataset.GetValues<byte>(Aspose.Medical.Dicom.Tags.Tag.PixelData);
+Aspose.Medical.Dicom.Elements.OtherByte iccProfile =
+    dataset.Get<Aspose.Medical.Dicom.Elements.OtherByte>(
+        Aspose.Medical.Dicom.Tags.Tag.ICCProfile);
+
+System.Span<byte> profileBytes = iccProfile.Data.Span;
 ```
 
 ### Skip Loading Large Tags
@@ -66,9 +75,12 @@ Span<byte> pixelDataTag = dataset.GetValues<byte>(Aspose.Medical.Dicom.Tags.Tag.
 For scenarios where memory footprint must be minimized, and large tag data is not needed.
 
 ```csharp
-Aspose.Medical.Dicom.DicomFile dicomFile = DicomFile.Open(
+Aspose.Medical.Dicom.DicomFile dicomFile = Aspose.Medical.Dicom.DicomFile.Open(
     "large_file.dcm",
-    fallbackEncoding: System.Text.Encoding.UTF8,
+    options: new Aspose.Medical.Dicom.Readers.ReadDicomFileOptions
+    {
+        FallbackEncoding = System.Text.Encoding.UTF8
+    },
     strategy: Aspose.Medical.Dicom.Readers.TagDataReadingStrategies.SkipLargeTags(largeObjectSizeKb: 256) // Skip tags > 256 KB
 );
 ```
@@ -95,10 +107,13 @@ For both `ReadLargeOnDemand()` and `SkipLargeTags()`, you can customize the size
 All strategies work with stream-based file access too.
 
 ```csharp
-using System.IO.FileStream fileStream = File.OpenRead("file.dcm");
-Aspose.Medical.Dicom.DicomFile dicomFile = DicomFile.Open(
+using System.IO.FileStream fileStream = System.IO.File.OpenRead("file.dcm");
+Aspose.Medical.Dicom.DicomFile dicomFile = Aspose.Medical.Dicom.DicomFile.Open(
     fileStream,
-    fallbackEncoding: System.Text.Encoding.UTF8,
+    options: new Aspose.Medical.Dicom.Readers.ReadDicomStreamOptions
+    {
+        FallbackEncoding = System.Text.Encoding.UTF8
+    },
     strategy: Aspose.Medical.Dicom.Readers.TagDataReadingStrategies.ReadLargeOnDemand(largeObjectSizeKb: 512)
 );
 ```

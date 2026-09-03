@@ -17,3 +17,4 @@ The following subsections will guide you through accessing `DICOM` attributes, m
 - [Manage `DICOM` Data Elements]({{< ref "/10-net/20-developer-guide/40-data-manipulation/30-manage-dicom-data-elements" >}} "Manage DICOM Data Elements")
 - [Adding private `Tags` to `Tag Dictionary`]({{< ref "/10-net/20-developer-guide/40-data-manipulation/40-adding-private-tags-to-tag-dictionary" >}} "Adding Private Tags To Tag Dictionary")
 - [Custom Text Encoding]({{< ref "/10-net/20-developer-guide/40-data-manipulation/50-text-encoding" >}} "Text Encoding")
+- [Low-level buffer-backed element creation]({{< ref "/10-net/20-developer-guide/40-data-manipulation/60-buffer-backed-element-creation" >}} "Buffer-backed element creation")

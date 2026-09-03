@@ -15,20 +15,20 @@ url: /net/developer-guide/dicom-data-manipulation/getting-dicom-data/
 There could be scenarios when you need to check if the dataset contains the required tag before retrieving specific data from a `DICOM` file. Method `Aspose.Medical.Dicom.Dataset.Contains` allows checking if data is available or not.
 
 ```csharp
-Aspose.Medical.Dicom.DicomFile dicomFile = DicomFile.Open("path/to/dicom/file.dcm");
+Aspose.Medical.Dicom.DicomFile dicomFile = Aspose.Medical.Dicom.DicomFile.Open("path/to/dicom/file.dcm");
 Aspose.Medical.Dicom.Dataset dataset = dicomFile.Dataset;
 
 // Define the DICOM tag for Patient Name (0010,0010)
-Aspose.Medical.Dicom.Tags.Tag patientNameTag = Tag.PatientName;
+Aspose.Medical.Dicom.Tags.Tag patientNameTag = Aspose.Medical.Dicom.Tags.Tag.PatientName;
 
 // Check if the dataset contains the tag
 if (dataset.Contains(patientNameTag))
 {
-    Console.WriteLine("Patient Name tag is available.");
+    System.Console.WriteLine("Patient Name tag is available.");
 }
 else
 {
-    Console.WriteLine("Patient Name tag is not found in the DICOM file.");
+    System.Console.WriteLine("Patient Name tag is not found in the DICOM file.");
 }
 ```
 
@@ -37,11 +37,11 @@ else
 Some `DICOM` tags have only one value, such as the patient's name or study description. Use `Aspose.Medical.Dicom.Dataset.GetSingleValue<T>` to retrieve a single value. The method enforces the constraint and throws an exception when it’s not met.
 
 ```csharp
-Aspose.Medical.Dicom.DicomFile dicomFile = DicomFile.Open("path/to/dicom/file.dcm");
+Aspose.Medical.Dicom.DicomFile dicomFile = Aspose.Medical.Dicom.DicomFile.Open("path/to/dicom/file.dcm");
 Aspose.Medical.Dicom.Dataset dataset = dicomFile.Dataset;
 
 // Define the tag for Patient's Name
-Aspose.Medical.Dicom.Tags.Tag patientNameTag = Tag.PatientName;
+Aspose.Medical.Dicom.Tags.Tag patientNameTag = Aspose.Medical.Dicom.Tags.Tag.PatientName;
 
 // Retrieve the patient's name
 string patientName = dataset.GetSingleValue<string>(patientNameTag);
@@ -54,19 +54,19 @@ string patientName = dataset.GetSingleValue<string>(patientNameTag);
 Some `DICOM` tags contain multiple values—for example, Image Positions or Pixel Spacing. Use `Aspose.Medical.Dicom.Dataset.GetValues<T>` to retrieve multiple values.
 
 ```csharp
-Aspose.Medical.Dicom.DicomFile dicomFile = DicomFile.Open("path/to/dicom/file.dcm");
+Aspose.Medical.Dicom.DicomFile dicomFile = Aspose.Medical.Dicom.DicomFile.Open("path/to/dicom/file.dcm");
 Aspose.Medical.Dicom.Dataset dataset = dicomFile.Dataset;
 
 // Define the tag for Pixel Spacing
-Aspose.Medical.Dicom.Tags.Tag pixelSpacingTag = Tag.PixelSpacing;
+Aspose.Medical.Dicom.Tags.Tag pixelSpacingTag = Aspose.Medical.Dicom.Tags.Tag.PixelSpacing;
 
 // Retrieve multiple values
 System.Span<double> pixelSpacingValues = dataset.GetValues<double>(pixelSpacingTag);
 
-Console.WriteLine("Pixel Spacing:");
+System.Console.WriteLine("Pixel Spacing:");
 foreach (double value in pixelSpacingValues)
 {
-    Console.WriteLine(value);
+    System.Console.WriteLine(value);
 }
 ```
 
@@ -77,35 +77,35 @@ foreach (double value in pixelSpacingValues)
 Sometimes, a `DICOM` tag may be missing from the file. The `Aspose.Medical.Dicom.Dataset.GetSingleValueOrDefault<T>` method allows you to specify a default value when the tag is absent.
 
 ```csharp
-Aspose.Medical.Dicom.DicomFile dicomFile = DicomFile.Open("path/to/dicom/file.dcm");
+Aspose.Medical.Dicom.DicomFile dicomFile = Aspose.Medical.Dicom.DicomFile.Open("path/to/dicom/file.dcm");
 Aspose.Medical.Dicom.Dataset dataset = dicomFile.Dataset;
 
 // Define the tag for Institution Name (0008,0080)
-Aspose.Medical.Dicom.Tags.Tag institutionNameTag = Tag.InstitutionName;
+Aspose.Medical.Dicom.Tags.Tag institutionNameTag = Aspose.Medical.Dicom.Tags.Tag.InstitutionName;
 
 // Retrieve the institution name or return "Unknown" if not found
 string institutionName = dataset.GetSingleValueOrDefault<string>(institutionNameTag, "Unknown");
 
-Console.WriteLine("Institution Name: " + institutionName);
+System.Console.WriteLine("Institution Name: " + institutionName);
 ```
 
-**NOTE**: The method fails with an exception if the specified tag is absent in the dataset.
+**NOTE**: The method returns the supplied default value when the specified tag is absent from the dataset.
 
 ## Retrieving a Specific Value from a Multi-Valued `Tag`
 
-For For DICOM tags that contain multiple values, use the `Aspose.Medical.Dicom.Dataset.GetValue<T>` method to access a specific value at a given index. tags that contain multiple values, use the `Aspose.Medical.Dicom.Dataset.GetValue<T>` method to access a specific value at a given index.
+For DICOM tags that contain multiple values, use the `Aspose.Medical.Dicom.Dataset.GetValue<T>` method to access a specific value at a given index.
 
 ```csharp
-Aspose.Medical.Dicom.DicomFile dicomFile = DicomFile.Open("path/to/dicom/file.dcm");
+Aspose.Medical.Dicom.DicomFile dicomFile = Aspose.Medical.Dicom.DicomFile.Open("path/to/dicom/file.dcm");
 Aspose.Medical.Dicom.Dataset dataset = dicomFile.Dataset;
 
 // Define the tag for Image Position
-Aspose.Medical.Dicom.Tags.Tag imagePositionTag = Tag.ImagePositionPatient;
+Aspose.Medical.Dicom.Tags.Tag imagePositionTag = Aspose.Medical.Dicom.Tags.Tag.ImagePositionPatient;
 
 // Retrieve the first value from the Image Position Patient array
-double imagePositionX = dataset.GetValue<double>(imagePositionTag, ^1);
+double imagePositionX = dataset.GetValue<double>(imagePositionTag, 0);
 
-Console.WriteLine("First Image Position X: " + imagePositionX);
+System.Console.WriteLine("First Image Position X: " + imagePositionX);
 ```
 
 **NOTE**: The method fails with an exception if the specified tag is absent in the dataset.
@@ -115,11 +115,11 @@ Console.WriteLine("First Image Position X: " + imagePositionX);
 `Aspose.Medical` provides `Aspose.Medical.Dicom.Dataset.TryGetSingleValue<T>` to safely retrieve data without raising an exception if the tag does not exist.
 
 ```csharp
-Aspose.Medical.Dicom.DicomFile dicomFile = DicomFile.Open("path/to/dicom/file.dcm");
+Aspose.Medical.Dicom.DicomFile dicomFile = Aspose.Medical.Dicom.DicomFile.Open("path/to/dicom/file.dcm");
 Aspose.Medical.Dicom.Dataset dataset = dicomFile.Dataset;
 
 // Try to get the patient's name safely
-Aspose.Medical.Dicom.Tags.Tag tag = Tag.PatientName;
+Aspose.Medical.Dicom.Tags.Tag tag = Aspose.Medical.Dicom.Tags.Tag.PatientName;
 if (dataset.TryGetSingleValue(tag, out string? patientName))
 {
     // Value exists - work with it
